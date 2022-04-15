@@ -8,20 +8,17 @@
   width: 200px;
   border-radius: 50%;
   border: none;
-  transition: this 200ms;
-  opacity: 70%;
+  transition: 400ms;
 }
 .Orb span {
-  color: #212121;
+  color: #424242;
   font-weight: 600;
   font-size: 30px;
   letter-spacing: -2px;
-  text-transform: capitalize;
 }
 .Orb span::after {
   content: ".";
 }
 .Orb:hover {
-  opacity: 100%;
   cursor: pointer;
 }
