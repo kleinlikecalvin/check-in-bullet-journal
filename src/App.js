@@ -31,7 +31,6 @@ export default function App() {
   const [allMoments, setAllMoments] = React.useState(0);
 
   const moods = [down, anxious, neutral, confused, sexy, angry, up, fun];
-
   return (
     <div className="App">
       <Head />
@@ -39,7 +38,7 @@ export default function App() {
         moods={moods}
         setAllMoments={() => setAllMoments(allMoments + 1)}
       />
-      <Data />
+      <Data allMoments={allMoments} moods={moods} />
     </div>
   );
 }
