@@ -1,0 +1,11 @@
+.Moods {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid blue; */
+}
+.Moods .mood {
+  /* border: 2px solid red; */
+  margin: 10px;
+}
