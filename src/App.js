@@ -10,7 +10,20 @@ export default function App() {
     this.id = id;
     this.color = color;
     this.totalMomentsDuringYear = 0;
-    this.dates = [];
+    this.currentYear = {
+      jan: [],
+      feb: [],
+      mar: [],
+      apr: [],
+      may: [],
+      jun: [],
+      jul: [],
+      aug: [],
+      sep: [],
+      oct: [],
+      nov: [],
+      dec: [],
+    };
   }
 
   //Mood state handling
@@ -29,7 +42,6 @@ export default function App() {
 
   //All moments for the year
   const [allMoments, setAllMoments] = React.useState(0);
-
   const moods = [up, down, fun, anxious, neutral, confused, sexy, angry];
   return (
     <div className="App">
