@@ -1,5 +1,5 @@
 .Data {
-  display: flex;
+  /* display: flex; */
   border-top: 3px solid orange;
   width: 100%;
   justify-content: space-between;
