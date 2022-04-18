@@ -30,7 +30,7 @@ export default function App() {
   //All moments for the year
   const [allMoments, setAllMoments] = React.useState(0);
 
-  const moods = [down, anxious, neutral, confused, sexy, angry, up, fun];
+  const moods = [up, down, fun, anxious, neutral, confused, sexy, angry];
   return (
     <div className="App">
       <Head />
