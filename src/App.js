@@ -45,12 +45,12 @@ export default function App() {
   const moods = [up, down, fun, anxious, neutral, confused, sexy, angry];
   return (
     <div className="App">
+      <Data allMoments={allMoments} moods={moods} />
       <Head />
       <Moods
         moods={moods}
         setAllMoments={() => setAllMoments(allMoments + 1)}
       />
-      <Data allMoments={allMoments} moods={moods} />
     </div>
   );
 }
