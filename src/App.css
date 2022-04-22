@@ -1,8 +1,21 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+      217deg,
+      rgb(155, 232, 255),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgb(169, 255, 169), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, pink, rgba(0, 0, 255, 0) 70.71%);
+  color: #424242;
+  font-family: Arial, Helvetica, sans-serif;
+}
 .App {
-  max-width: 1000px;
-  margin: 100px auto;
-  /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
