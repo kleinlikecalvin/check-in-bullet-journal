@@ -1,25 +1,22 @@
-.Orb {
-  --orbMainColor: white;
-  background: radial-gradient(
-    var(--orbMainColor) 10%,
-    rgba(255, 255, 255, 0) 70%
-  );
+.Mood {
+  --moodMainColor: white;
+  background-color: var(--moodMainColor);
+  background: linear-gradient(200deg, var(--moodMainColor), rgba(0, 0, 0, 0));
   height: 200px;
   width: 200px;
-  border-radius: 50%;
   border: none;
   transition: 400ms;
 }
-.Orb span {
+.Mood span {
   color: #424242;
   font-weight: 600;
   font-size: 30px;
   letter-spacing: -2px;
 }
-.Orb span::after {
+.Mood span::after {
   content: ".";
 }
-.Orb:hover {
+.Mood:hover {
   cursor: pointer;
   transform: scale(1.5);
 }
