@@ -1,11 +1,11 @@
 import React from "react";
-import Orb from "./Orb";
+import Mood from "./Mood";
 import "./Moods.css";
 
 export default function Moods({ moods, setAllMoments }) {
-  const orbs = moods.map((mood) => (
+  const tiles = moods.map((mood) => (
     <div className="mood" key={mood.id}>
-      <Orb
+      <Mood
         color={mood.color}
         id={mood.id}
         onClick={() => {
@@ -55,8 +55,13 @@ export default function Moods({ moods, setAllMoments }) {
         }}
       >
         I feel {mood.id}
-      </Orb>
+      </Mood>
     </div>
   ));
-  return <div className="Moods">{orbs}</div>;
+  return (
+    <div className="Moods flex col">
+      <h1>How do you feel?</h1>
+      <div className="moodsCont flex">{tiles}</div>
+    </div>
+  );
 }
