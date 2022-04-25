@@ -54,7 +54,7 @@ export default function DayVisualData({ test, hours, color, mood }) {
     if (hoursOfMomentCapturedToday.has(num)) {
       return <td key={num} style={{ backgroundColor: color }}></td>;
     } else {
-      return <td key={num} style={{ backgroundColor: "black" }}></td>;
+      return <td key={num} style={{ backgroundColor: "#424242" }}></td>;
     }
   });
   return <Fragment>{hourlyData}</Fragment>;
