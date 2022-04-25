@@ -1,9 +1,11 @@
 import React from "react";
+import TextDisplay from "./TextDisplay";
+import "./Head.css";
 
-export default function Head() {
+export default function Head({ allMoments, moods }) {
   return (
     <div className="Head">
-      <h1>How do you feel?</h1>
+      <TextDisplay allMoments={allMoments} moods={moods} />
     </div>
   );
 }
