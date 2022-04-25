@@ -1,0 +1,9 @@
+.VisualDisplay {
+  width: 100%;
+  justify-content: space-between;
+  border: 2px solid salmon;
+  margin-bottom: 4rem;
+}
+.VisualDisplay .visualDataCont {
+  text-align: center;
+}

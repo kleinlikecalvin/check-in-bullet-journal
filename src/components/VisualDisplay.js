@@ -1,5 +1,7 @@
 import React from "react";
 import DayVisual from "./DayVisual";
+import WeekVisual from "./WeekVisual";
+import "./VisualDisplay.css";
 
 export default function VisualDisplay({ moods }) {
   //moods is an array []
@@ -17,7 +19,10 @@ export default function VisualDisplay({ moods }) {
   // console.log(downTimes[1].getMinutes());
 
   return (
-    <div className="VisualDisplay">
+    <div className="VisualDisplay flex">
+      <div className="btn">
+        <button>back</button>
+      </div>
       {/*
           VALUE 1: Most felt in [CURRENT YEAR]
             - Need to create a test case in order to make this since I dont have a years worth of data on hand
@@ -43,7 +48,15 @@ export default function VisualDisplay({ moods }) {
           ✅ VALUE 4: TODAY
             - Populate either a table or grid with all of the emotions tracked in the day
            */}
-      <DayVisual moods={moods} />
+
+      <div className="visualDataCont">
+        <WeekVisual moods={moods} />
+
+        <DayVisual moods={moods} />
+      </div>
+      <div className="btn">
+        <button>next</button>
+      </div>
     </div>
   );
 }
