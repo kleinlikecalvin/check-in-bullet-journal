@@ -2,13 +2,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background: linear-gradient(
-      217deg,
-      rgb(155, 232, 255),
-      rgba(255, 0, 0, 0) 70.71%
-    ),
-    linear-gradient(127deg, rgb(169, 255, 169), rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(336deg, pink, rgba(0, 0, 255, 0) 70.71%);
+  background-color: rgb(255, 255, 246);
   color: #424242;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -18,4 +12,11 @@ html {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 10px;
+}
+.App .flex {
+  display: flex;
+}
+.App .col {
+  flex-direction: column;
 }
