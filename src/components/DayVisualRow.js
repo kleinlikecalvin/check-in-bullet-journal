@@ -35,7 +35,7 @@ export default function DayVisualRow({ moods, test }) {
     <tbody className="DayVisualRow">
       {moodRow}
       <tr>
-        <th></th>
+        <th style={{ border: "none" }}></th>
         {hours}
       </tr>
     </tbody>

@@ -1,7 +1,7 @@
 .DayVisualRow th {
   min-width: fit-content;
   padding: 5px;
-  border: 2px solid black;
+  border: 2px solid #424242;
   text-align: right;
   text-transform: capitalize;
 }
