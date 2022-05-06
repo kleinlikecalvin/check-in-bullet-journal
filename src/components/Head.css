@@ -1,5 +1,14 @@
 .Head {
-  border: 2px solid pink;
+  list-style: none;
+  border: 2px solid lime;
+  padding: 0;
+  margin: 0;
   width: 100%;
-  margin-bottom: 4rem;
+}
+.Head li {
+  margin: 4px 0;
+}
+.Head li span {
+  font-weight: 600;
+  padding: 0 2px 0 2px;
 }

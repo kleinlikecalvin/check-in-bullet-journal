@@ -1,9 +1,0 @@
-.TextDisplay {
-  list-style: none;
-  border: 2px solid lime;
-  padding: 0;
-  margin: 0;
-}
-.TextDisplay li {
-  margin: 4px 0;
-}
