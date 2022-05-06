@@ -2,7 +2,7 @@ import React from "react";
 import Mood from "./Mood";
 import "./Moods.css";
 
-export default function Moods({ moods, setAllMoments }) {
+export default function Moods({ moods, allMoments }) {
   const tiles = moods.map((mood) => (
     <div className="mood" key={mood.id}>
       <Mood
@@ -12,46 +12,46 @@ export default function Moods({ moods, setAllMoments }) {
           const now = new Date();
           switch (now.getMonth()) {
             case 0:
-              mood.currentYear.jan.push(now);
+              allMoments.currentYear.jan.push({ mood: mood.id, instance: now });
               break;
             case 1:
-              mood.currentYear.feb.push(now);
+              allMoments.currentYear.feb.push({ mood: mood.id, instance: now });
               break;
             case 2:
-              mood.currentYear.mar.push(now);
+              allMoments.currentYear.mar.push({ mood: mood.id, instance: now });
               break;
             case 3:
-              mood.currentYear.apr.push(now);
+              allMoments.currentYear.apr.push({ mood: mood.id, instance: now });
               break;
             case 4:
-              mood.currentYear.may.push(now);
+              allMoments.currentYear.may.push({ mood: mood.id, instance: now });
               break;
             case 5:
-              mood.currentYear.jun.push(now);
+              allMoments.currentYear.jun.push({ mood: mood.id, instance: now });
               break;
             case 6:
-              mood.currentYear.jul.push(now);
+              allMoments.currentYear.jul.push({ mood: mood.id, instance: now });
               break;
             case 7:
-              mood.currentYear.aug.push(now);
+              allMoments.currentYear.aug.push({ mood: mood.id, instance: now });
               break;
             case 8:
-              mood.currentYear.sep.push(now);
+              allMoments.currentYear.sep.push({ mood: mood.id, instance: now });
               break;
             case 9:
-              mood.currentYear.oct.push(now);
+              allMoments.currentYear.oct.push({ mood: mood.id, instance: now });
               break;
             case 10:
-              mood.currentYear.nov.push(now);
+              allMoments.currentYear.nov.push({ mood: mood.id, instance: now });
               break;
             case 11:
-              mood.currentYear.dec.push(now);
+              allMoments.currentYear.dec.push({ mood: mood.id, instance: now });
               break;
             default:
               console.log("I can't figure out where to put this");
           }
           mood.totalMomentsDuringYear++;
-          setAllMoments();
+          allMoments.allMomentsTally++;
         }}
       >
         I feel {mood.id}

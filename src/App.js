@@ -1,6 +1,6 @@
 import React from "react";
 import Moods from "./components/Moods";
-import VisualDisplay from "./components/VisualDisplay";
+// import VisualDisplay from "./components/VisualDisplay";
 import Head from "./components/Head";
 import "./App.css";
 
@@ -10,20 +10,6 @@ export default function App() {
     this.id = id;
     this.color = `#${color}`;
     this.totalMomentsDuringYear = 0;
-    this.currentYear = {
-      jan: [],
-      feb: [],
-      mar: [],
-      apr: [],
-      may: [],
-      jun: [],
-      jul: [],
-      aug: [],
-      sep: [],
-      oct: [],
-      nov: [],
-      dec: [],
-    };
   }
 
   //Moods state handling
@@ -41,16 +27,31 @@ export default function App() {
   const moods = [up, down, fun, anxious, neutral, confused, sexy, angry];
 
   //All moments for the year
-  const [allMoments, setAllMoments] = React.useState(0);
+  const [allMoments, setAllMoments] = React.useState({
+    allMomentsTally: 0,
+    currentYear: {
+      jan: [],
+      feb: [],
+      mar: [],
+      apr: [],
+      may: [],
+      jun: [],
+      jul: [],
+      aug: [],
+      sep: [],
+      oct: [],
+      nov: [],
+      dec: [],
+    },
+  });
 
+  //🚨 Left off here
+  //need to reconnect VisualDisplay, fix day bugs, then continue where I left off in weekVisual
   return (
     <div className="App">
       <Head allMoments={allMoments} moods={moods} />
-      <VisualDisplay moods={moods} />
-      <Moods
-        moods={moods}
-        setAllMoments={() => setAllMoments(allMoments + 1)}
-      />
+      {/* <VisualDisplay moods={moods} /> */}
+      <Moods moods={moods} allMoments={allMoments} />
     </div>
   );
 }
